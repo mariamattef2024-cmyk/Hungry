@@ -1,0 +1,124 @@
+name: hungry
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.8.0
+
+dependencies:
+  dartz: ^0.10.1
+  dio: ^5.9.0
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^9.1.1
+  flutter_screenutil: ^5.9.3
+  flutter_svg: ^2.2.2
+  smart_appbar: ^4.0.0
+
+dev_dependencies:
+  flutter_lints: ^5.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/fonts/
+    - assets/images/
+    - assets/svg/
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Black.ttf
+          weight: 900
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Poppins-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/Poppins-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/Poppins-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/Poppins-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-SemiBoldItalic.ttf
+          weight: 600
+          style: italic
+        - asset: assets/fonts/Poppins-Thin.ttf
+          weight: 100
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-Black.ttf
+          weight: 900
+        - asset: assets/fonts/Roboto-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Roboto-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/Roboto-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/Roboto-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Roboto-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Roboto-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Roboto-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Roboto-Thin.ttf
+          weight: 100
+    - family: Roboto_Condensed
+      fonts:
+        - asset: assets/fonts/Roboto_Condensed-Black.ttf
+          weight: 900
+        - asset: assets/fonts/Roboto_Condensed-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Roboto_Condensed-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/Roboto_Condensed-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/Roboto_Condensed-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Roboto_Condensed-LightItalic.ttf
+          weight: 300
+          style: italic
+        - asset: assets/fonts/Roboto_Condensed-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Roboto_Condensed-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Roboto_Condensed-SemiBold.ttf
+          weight: 600
+
+        - asset: assets/fonts/Roboto_Condensed-Thin.ttf
+          weight: 100
+    - family: Roboto_SemiCondensed
+      fonts:
+        - asset: assets/fonts/Roboto_SemiCondensed-Black.ttf
+          weight: 900
+        - asset: assets/fonts/Roboto_SemiCondensed-BlackItalic.ttf
+          weight: 900
+          style: italic
+        - asset: assets/fonts/Roboto_SemiCondensed-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Roboto_SemiCondensed-ExtraBold.ttf
+          weight: 800
+        - asset: assets/fonts/Roboto_SemiCondensed-ExtraLight.ttf
+          weight: 200
+        - asset: assets/fonts/Roboto_SemiCondensed-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Roboto_SemiCondensed-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Roboto_SemiCondensed-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Roboto_SemiCondensed-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Roboto_SemiCondensed-Thin.ttf
+          weight: 100
+
