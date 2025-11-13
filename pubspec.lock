@@ -147,6 +147,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  gap:
+    dependency: "direct main"
+    description:
+      name: gap
+      sha256: f19387d4e32f849394758b91377f9153a1b41d79513ef7668c088c77dbc6955d
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.1"
   hive_ce:
     dependency: transitive
     description:
@@ -368,14 +376,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  smart_appbar:
-    dependency: "direct main"
-    description:
-      name: smart_appbar
-      sha256: "89b6151451b5acd9a8fc41b803a865b544a56c6813b715f5157c119bcb1fb9ab"
-      url: "https://pub.dev"
-    source: hosted
-    version: "4.0.0"
   source_span:
     dependency: transitive
     description:

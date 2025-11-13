@@ -24,22 +24,23 @@ ThemeData getLightTheme() {
         disabledBackgroundColor: AppColors.grey100,
         disabledForegroundColor: AppColors.grey0,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20.0),
+          borderRadius: BorderRadius.circular(20.0.r),
         ),
         textStyle: AppTextStyles.lSemiBold,
       ),
     ),
     inputDecorationTheme: InputDecorationTheme(
+      
       border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(20.0),
+        borderRadius: BorderRadius.circular(20.0.r),
         borderSide: const BorderSide(color: AppColors.grey100),
       ),
       enabledBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(20.0),
+        borderRadius: BorderRadius.circular(20.0.r),
         borderSide: const BorderSide(color: AppColors.grey100),
       ),
       focusedBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(20.0),
+        borderRadius: BorderRadius.circular(20.0.r),
         borderSide: const BorderSide(color: AppColors.cardColorLight),
       ),
       fillColor: WidgetStateColor.resolveWith((states) {
@@ -52,6 +53,12 @@ ThemeData getLightTheme() {
       hintStyle: AppTextStyles.lMedium.copyWith(
         color: AppColors.textColorLight,
       ),
+    ),
+    cardTheme: CardThemeData(
+      color: AppColors.primaryColor,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.r)),
+      elevation: 4,
+      margin: EdgeInsets.all(8.r),
     ),
   );
 }

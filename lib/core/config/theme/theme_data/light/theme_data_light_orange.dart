@@ -1,58 +1,61 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hungry/core/config/theme/app_color.dart';
+import 'package:hungry/core/config/theme/app_fonts.dart';
 import 'package:hungry/core/config/theme/app_text_style.dart';
 
-import '../../app_fonts.dart';
-
-ThemeData getLightBlueTheme() {
+ThemeData getLightOrangeTheme() {
   return ThemeData(
-    scaffoldBackgroundColor: AppColors.scaffoldBackgroundLightBlue,
+    scaffoldBackgroundColor: AppColors.scaffoldBackgroundColorLight,
     brightness: Brightness.light,
     fontFamily: AppFonts.robotoFont,
     colorScheme: ColorScheme.fromSeed(
-      seedColor: AppColors.primaryLightBlue300,
+      seedColor: AppColors.primaryColor,
       brightness: Brightness.light,
     ),
     textTheme: ThemeData.light().textTheme.apply(
-      bodyColor: AppColors.grey900,
-      displayColor: AppColors.grey900,
+      bodyColor: AppColors.textColorLight,
+      displayColor: AppColors.textColorLight,
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        backgroundColor: AppColors.primaryLightBlue300,
+        backgroundColor: AppColors.primaryColor,
         foregroundColor: AppColors.grey0,
         disabledBackgroundColor: AppColors.grey100,
         disabledForegroundColor: AppColors.grey0,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-        textStyle: AppTextStyles.mSemiBold,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20.0.r),
+        ),
+        textStyle: AppTextStyles.lSemiBold,
       ),
     ),
     inputDecorationTheme: InputDecorationTheme(
+      
       border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(20.0.r),
         borderSide: const BorderSide(color: AppColors.grey100),
       ),
       enabledBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(20.0.r),
         borderSide: const BorderSide(color: AppColors.grey100),
       ),
       focusedBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
-        borderSide: const BorderSide(color: AppColors.primaryLightBlue200),
+        borderRadius: BorderRadius.circular(20.0.r),
+        borderSide: const BorderSide(color: AppColors.cardColorLight),
       ),
       fillColor: WidgetStateColor.resolveWith((states) {
         if (states.contains(WidgetState.focused)) {
-          return AppColors.primaryLightBlue0;
+          return AppColors.cardColorLight;
         }
         return AppColors.grey0;
       }),
       filled: true,
-      hintStyle: AppTextStyles.mRegular.copyWith(color: AppColors.grey400),
+      hintStyle: AppTextStyles.lMedium.copyWith(
+        color: AppColors.textColorLight,
+      ),
     ),
     cardTheme: CardThemeData(
-      color: AppColors.primaryLightRed25,
-      
+      color: AppColors.primaryColor,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.r)),
       elevation: 4,
       margin: EdgeInsets.all(8.r),

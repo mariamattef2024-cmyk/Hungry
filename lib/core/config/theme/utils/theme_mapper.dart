@@ -9,18 +9,13 @@ import 'package:hungry/core/config/theme/theme_data/dark/theme_data_dark_red.dar
 import 'package:hungry/core/config/theme/theme_data/dark/theme_data_dark_yellow.dart';
 import 'package:hungry/core/config/theme/theme_data/light/theme_data_light_blue.dart';
 import 'package:hungry/core/config/theme/theme_data/light/theme_data_light_green.dart';
+import 'package:hungry/core/config/theme/theme_data/light/theme_data_light_orange.dart';
 import 'package:hungry/core/config/theme/theme_data/light/theme_data_light_purble.dart';
 import 'package:hungry/core/config/theme/theme_data/light/theme_data_light_red.dart';
 import 'package:hungry/core/config/theme/theme_data/light/theme_data_light_yellow.dart';
+import 'package:hungry/core/config/theme/theme_data/theme_data_dark.dart';
 
-
-enum ThemeNames {
-  red,
-  green,
-  blue,
-  yellow,
-  purple,
-}
+enum ThemeNames { red, green, blue, yellow, purple, orange }
 
 Map<ThemeNames, AppTheme> themeMapper = {
   ThemeNames.red: AppTheme(
@@ -48,6 +43,11 @@ Map<ThemeNames, AppTheme> themeMapper = {
     light: getLightPurpleTheme(),
     dark: getDarkPurpleTheme(),
   ),
+  ThemeNames.orange: AppTheme(
+    name: ThemeNames.orange,
+    light: getLightOrangeTheme(),
+    dark: getDarkOrangeTheme(),
+  ),
 };
 
 class AppTheme {
@@ -56,10 +56,10 @@ class AppTheme {
     required ThemeData dark,
     required ThemeNames name,
     ThemeMode currentMode = ThemeMode.light,
-  })  : _light = light,
-        _dark = dark,
-        _name = name,
-        _currentMode = currentMode;
+  }) : _light = light,
+       _dark = dark,
+       _name = name,
+       _currentMode = currentMode;
 
   final ThemeData _light;
   final ThemeData _dark;
@@ -82,8 +82,9 @@ class AppTheme {
   factory AppTheme.fromMap(Map<String, dynamic> map) {
     String name = map['name'];
     ThemeNames nameEnum = ThemeNames.values.firstWhere(
-        (value) => value.name == name,
-        orElse: () => ThemeNames.green);
+      (value) => value.name == name,
+      orElse: () => ThemeNames.green,
+    );
     String savedMode = map['mode'];
     ThemeMode mode = savedMode == 'dark' ? ThemeMode.dark : ThemeMode.light;
     AppTheme requiredAppTheme = themeMapper[nameEnum]!;

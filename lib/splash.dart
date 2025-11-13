@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gap/gap.dart';
 import 'package:hungry/core/config/theme/app_color.dart';
+import 'package:hungry/core/config/theme/extentions/theme_extentions.dart';
 import 'package:hungry/core/config/theme/utils/theme_functions.dart';
 import 'package:hungry/core/config/theme/utils/theme_mapper.dart';
+import 'package:hungry/features/auth/presentation/login_screen.dart';
 
 class Splash extends StatelessWidget {
   const Splash({super.key});
@@ -11,7 +14,6 @@ class Splash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Color(0xFFF8F4E3),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -26,8 +28,18 @@ class Splash extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: 20.h),
-
+          Gap(20.h),
+          ElevatedButton(
+            onPressed: () {
+              if (context.isDarkMode) {
+                toggleMode(context);
+              } else {
+                toggleMode(context);
+              }
+            },
+            child: const Text("Toggle Theme"),
+          ),
+          Gap(20.h),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -40,7 +52,7 @@ class Splash extends StatelessWidget {
                 ),
                 child: const SizedBox(),
               ),
-              const SizedBox(width: 10),
+              Gap(5.w),
               ElevatedButton(
                 onPressed: () {
                   toggleTheme(context, ThemeNames.red);
@@ -50,7 +62,7 @@ class Splash extends StatelessWidget {
                 ),
                 child: const SizedBox(),
               ),
-              const SizedBox(width: 10),
+              Gap(5.w),
               ElevatedButton(
                 onPressed: () {
                   toggleTheme(context, ThemeNames.blue);
@@ -60,7 +72,7 @@ class Splash extends StatelessWidget {
                 ),
                 child: const SizedBox(),
               ),
-              const SizedBox(width: 10),
+              Gap(5.w),
               ElevatedButton(
                 onPressed: () {
                   toggleTheme(context, ThemeNames.yellow);
@@ -70,7 +82,7 @@ class Splash extends StatelessWidget {
                 ),
                 child: const SizedBox(),
               ),
-              const SizedBox(width: 10),
+              Gap(5.w),
               ElevatedButton(
                 onPressed: () {
                   toggleTheme(context, ThemeNames.purple);
@@ -80,19 +92,34 @@ class Splash extends StatelessWidget {
                 ),
                 child: const SizedBox(),
               ),
-              const SizedBox(width: 10),
+              Gap(5.w),
+              ElevatedButton(
+                onPressed: () {
+                  toggleTheme(context, ThemeNames. );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: AppColors.primaryColor,
+                ),
+                child: const SizedBox(),
+              ),
             ],
           ),
-          // ElevatedButton(onPressed: () {}, child: Text('Get Started')),
           Spacer(),
           Image.asset("assets/images/image 1.png"),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) {
+                return const LoginScreen();
+              },
+            ),
+          );
+        },
+      ),
     );
   }
 }
-// F8F4E3  خلفية
-// 4A3C32  نصوص وايقونات
-// 0xFF08431D
-// A5A666  ازرار ثانوية
-// C85B2E  لون مميز رئيسي 

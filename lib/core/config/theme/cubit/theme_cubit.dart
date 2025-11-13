@@ -1,8 +1,4 @@
-import 'package:flutter/material.dart';
 import 'package:hungry/core/config/theme/utils/theme_mapper.dart';
-import 'package:hydrated_bloc/hydrated_bloc.dart';
-
-
 import 'package:hydrated_bloc/hydrated_bloc.dart';
 
 class ThemeCubit extends HydratedCubit<AppTheme> {

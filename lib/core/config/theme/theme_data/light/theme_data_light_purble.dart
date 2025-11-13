@@ -31,6 +31,7 @@ ThemeData getLightPurpleTheme() {
       ),
     ),
     inputDecorationTheme: InputDecorationTheme(
+      
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(10),
         borderSide: const BorderSide(
@@ -57,6 +58,7 @@ ThemeData getLightPurpleTheme() {
       }),
       filled: true,
       hintStyle: AppTextStyles.mRegular.copyWith(color: AppColors.grey400),
+      
     ),
   );
 }

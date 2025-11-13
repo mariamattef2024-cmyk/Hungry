@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hungry/core/config/theme/cubit/theme_cubit.dart';
 import 'package:hungry/core/config/theme/utils/theme_mapper.dart';
 import 'package:hungry/splash.dart';
-import 'package:smart_appbar/demo_smart_appbar.dart' show HomeScreen;
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
@@ -27,7 +26,7 @@ class MainApp extends StatelessWidget {
           ),
         );
       },
-      child: HomeScreen(),
+      child: Splash(),
     );
   }
 }
