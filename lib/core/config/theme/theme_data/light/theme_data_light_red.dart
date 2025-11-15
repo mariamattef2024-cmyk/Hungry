@@ -56,5 +56,10 @@ ThemeData getLightRedTheme() {
       filled: true,
       hintStyle: AppTextStyles.mRegular.copyWith(color: AppColors.grey400),
     ),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      backgroundColor: AppColors.primaryLightRed300,
+      selectedItemColor: AppColors.grey0,
+      unselectedItemColor: AppColors.primaryLightRed100,
+    ),
   );
 }

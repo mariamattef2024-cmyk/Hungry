@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hungry/core/config/theme/app_color.dart';
 import 'package:hungry/core/config/theme/app_text_style.dart';
 
@@ -50,11 +49,11 @@ ThemeData getLightGreenTheme() {
       filled: true,
       hintStyle: AppTextStyles.mRegular.copyWith(color: AppColors.grey400),
     ),
-    cardTheme: CardThemeData(
-      color: AppColors.primaryColor,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.r)),
-      elevation: 4,
-      margin: EdgeInsets.all(8.r),
+
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      backgroundColor: AppColors.primaryLightGreen300,
+      selectedItemColor: AppColors.grey0,
+      unselectedItemColor: AppColors.primaryLightGreen100,
     ),
   );
 }

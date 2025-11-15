@@ -52,10 +52,16 @@ ThemeData getLightBlueTheme() {
     ),
     cardTheme: CardThemeData(
       color: AppColors.primaryLightRed25,
-      
+
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.r)),
       elevation: 4,
       margin: EdgeInsets.all(8.r),
+    ),
+
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      selectedItemColor: AppColors.grey0,
+      unselectedItemColor: AppColors.grey400,
+      backgroundColor: AppColors.primaryLightBlue300,
     ),
   );
 }

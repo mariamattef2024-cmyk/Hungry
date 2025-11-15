@@ -5,6 +5,7 @@ import 'package:hungry/core/config/theme/cubit/theme_cubit.dart';
 import 'package:hungry/core/config/theme/utils/theme_mapper.dart';
 import 'package:hungry/splash.dart';
 
+
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
 

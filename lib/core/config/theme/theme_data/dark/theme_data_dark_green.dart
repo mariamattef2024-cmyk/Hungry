@@ -58,5 +58,10 @@ ThemeData getDarkGreenTheme() {
       filled: true,
       hintStyle: AppTextStyles.mRegular.copyWith(color: AppColors.grey400),
     ),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      backgroundColor: AppColors.primaryDarkGreen300,
+      selectedItemColor: AppColors.grey0,
+      unselectedItemColor: AppColors.primaryDarkGreen100,
+    ),
   );
 }

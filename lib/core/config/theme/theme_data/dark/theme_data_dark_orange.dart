@@ -13,7 +13,7 @@ ThemeData getDarkOrangeTheme() {
       seedColor: AppColors.primaryColor,
       brightness: Brightness.dark,
     ),
-    textTheme: ThemeData.light().textTheme.apply(
+    textTheme: ThemeData.dark().textTheme.apply(
       bodyColor: AppColors.textColorDark,
       displayColor: AppColors.textColorDark,
     ),
@@ -51,11 +51,10 @@ ThemeData getDarkOrangeTheme() {
       filled: true,
       hintStyle: AppTextStyles.lMedium.copyWith(color: AppColors.textColorDark),
     ),
-    cardTheme: CardThemeData(
-      color: AppColors.cardColorDark,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.r)),
-      elevation: 4,
-      margin: EdgeInsets.all(8.r),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      backgroundColor: AppColors.primaryColor,
+      selectedItemColor: AppColors.grey0,
+      unselectedItemColor: AppColors.secondaryButtonColor,
     ),
   );
 }

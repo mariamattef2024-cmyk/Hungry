@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
 
 class CustomTextFormField extends StatefulWidget {
   const CustomTextFormField({
@@ -31,7 +30,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
       obscureText: _obscureText!,
       autovalidateMode: AutovalidateMode.onUserInteraction,
       validator: (value) =>
-          value!.isEmpty ? 'Please enter your ${widget.hint}}' : null,
+          value!.isEmpty ? 'Please enter your ${widget.hint}' : null,
       decoration: InputDecoration(
         suffixIcon: widget.isPassword
             ? IconButton(
@@ -40,7 +39,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
                     _obscureText = !_obscureText!;
                   });
                 },
-                icon: widget.isPassword
+                icon: _obscureText!
                     ? const Icon(Icons.visibility)
                     : const Icon(Icons.visibility_off),
               )
@@ -48,6 +47,5 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
         labelText: widget.hint,
       ),
     );
- 
   }
 }

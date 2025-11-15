@@ -30,7 +30,6 @@ ThemeData getLightOrangeTheme() {
       ),
     ),
     inputDecorationTheme: InputDecorationTheme(
-      
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(20.0.r),
         borderSide: const BorderSide(color: AppColors.grey100),
@@ -54,11 +53,11 @@ ThemeData getLightOrangeTheme() {
         color: AppColors.textColorLight,
       ),
     ),
-    cardTheme: CardThemeData(
-      color: AppColors.primaryColor,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.r)),
-      elevation: 4,
-      margin: EdgeInsets.all(8.r),
+    // cardTheme: CardThemeData(
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      backgroundColor: AppColors.primaryColor,
+      selectedItemColor: AppColors.grey0,
+      unselectedItemColor: AppColors.secondaryButtonColor,
     ),
   );
 }
