@@ -12,6 +12,10 @@ ThemeData getDarkYellowTheme() {
       seedColor: AppColors.primaryDarkYellow300,
       brightness: Brightness.dark,
     ),
+    appBarTheme: AppBarTheme(
+      backgroundColor: AppColors.scaffoldBackgroundDarkYellow,
+      elevation: 0,
+    ),
     textTheme: ThemeData.light().textTheme.apply(
       bodyColor: AppColors.grey0,
       displayColor: AppColors.grey0,
@@ -22,7 +26,7 @@ ThemeData getDarkYellowTheme() {
         foregroundColor: AppColors.grey0,
         disabledBackgroundColor: AppColors.grey800,
         disabledForegroundColor: AppColors.grey400,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         textStyle: AppTextStyles.mSemiBold,
       ),
     ),
@@ -41,7 +45,7 @@ ThemeData getDarkYellowTheme() {
       ),
       fillColor: WidgetStateColor.resolveWith((states) {
         if (states.contains(WidgetState.focused)) {
-          return AppColors.darkFillColor;
+          return AppColors.primaryDarkYellow0;
         }
         return AppColors.grey800;
       }),

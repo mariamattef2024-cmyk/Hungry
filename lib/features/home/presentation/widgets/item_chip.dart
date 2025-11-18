@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hungry/core/config/theme/app_text_style.dart';
 
-class ChipItem extends StatelessWidget {
-  const ChipItem({
+class ItemChip extends StatelessWidget {
+  const ItemChip({
     super.key,
     required this.categorys,
     required this.selectedIndex,

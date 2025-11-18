@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:hungry/core/widgets/custom_text_field.dart';
-import 'package:hungry/features/home/presentation/widgets/chip_item.dart';
 import 'package:hungry/features/home/presentation/widgets/item_card.dart';
+import 'package:hungry/features/home/presentation/widgets/item_chip.dart';
 import 'package:hungry/features/home/presentation/widgets/user_header.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -59,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               ) {
                                 return Padding(
                                   padding: EdgeInsets.only(right: 8.0.r),
-                                  child: ChipItem(
+                                  child: ItemChip(
                                     onTap: () {
                                       selectedIndex = index;
                                       setState(() {});
@@ -88,7 +88,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   index,
                 ) {
                   return ItemCard(
-                    image: 'assets/images/image 1.png',
+                    image: 'assets/images/image 6.png',
                     title: 'Cheeseburger',
                     subtitle: 'Wendy\'s Burger',
                     rating: '4.9',
@@ -96,9 +96,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 }),
                 gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
-                  crossAxisSpacing: 5.0.r,
-                  mainAxisSpacing: 5.0.r,
-                  childAspectRatio: 0.7,
+                  crossAxisSpacing: 10.0.r,
+                  mainAxisSpacing: 10.0.r,
+                  childAspectRatio: 0.6,
                 ),
               ),
             ),
@@ -108,57 +108,3 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
-
-
-
-
-
-
-        // GridView.builder(
-        //                     physics = NeverScrollableScrollPhysics(),
-        //                     shrinkWrap = true,
-        //                     gridDelegate =
-        //                         SliverGridDelegateWithFixedCrossAxisCount(
-        //                           crossAxisCount: 2,
-        //                           crossAxisSpacing: 5.0.r,
-        //                           mainAxisSpacing: 5.0.r,
-        //                           childAspectRatio: 0.7,
-        //                         ),
-        //                     itemBuilder = (context, index) {
-        //                       return ItemCard(
-        //                         image: 'assets/images/image 1.png',
-        //                         title: 'Cheeseburger',
-        //                         subtitle: 'Wendy\'s Burger',
-        //                         rating: '4.9',
-        //                       );
-        //                     },
-        //                     itemCount = 6,
-        //                   ),
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // Padding(
-    //               padding: EdgeInsets.only(right: 10.0.r),
-    //               child: Chip(
-    //                 backgroundColor:
-    //                     index == 0 ? Color(0xFFFF6E4E) : Color(0xFFF4F4F4),
-    //                 label: Text(
-    //                   categorys[index],
-    //                   style: index == 0
-    //                       ? AppTextStyles.mSemiBold
-    //                           .copyWith(color: Colors.white)
-    //                       : AppTextStyles.mRegular
-    //                           .copyWith(color: Color(0xFF7D7D7D)),
-    //                 ),
-    //               ),
-    //             );

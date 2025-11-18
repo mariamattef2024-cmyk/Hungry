@@ -127,15 +127,15 @@ class AppTextStyles {
   static const mMedium = TextStyle(
     fontFamily: AppFonts.poppinsFont,
     fontSize: 16,
-    fontWeight: FontWeight.w500,
-    height: 1.6,
-    letterSpacing: -0.32,
+    fontWeight: FontWeight.w600,
+    height: 1.35,
+    letterSpacing: 0,
   );
 
   static const mSemiBold = TextStyle(
     fontFamily: AppFonts.poppinsFont,
     fontSize: 16,
-    fontWeight: FontWeight.w600,
+    fontWeight: FontWeight.w800,
     height: 1.6,
     letterSpacing: -0.32,
   );

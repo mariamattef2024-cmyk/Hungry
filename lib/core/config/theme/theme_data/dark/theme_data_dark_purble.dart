@@ -13,6 +13,10 @@ ThemeData getDarkPurpleTheme() {
       seedColor: AppColors.primaryDarkPurple300,
       brightness: Brightness.dark,
     ),
+    appBarTheme: AppBarTheme(
+      backgroundColor: AppColors.scaffoldBackgroundDarkPurple,
+      elevation: 0,
+    ),
     textTheme: ThemeData.light().textTheme.apply(
       bodyColor: AppColors.grey0,
       displayColor: AppColors.grey0,
@@ -23,7 +27,7 @@ ThemeData getDarkPurpleTheme() {
         foregroundColor: AppColors.grey0,
         disabledBackgroundColor: AppColors.grey800,
         disabledForegroundColor: AppColors.grey400,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         textStyle: AppTextStyles.mSemiBold,
       ),
     ),
@@ -42,7 +46,7 @@ ThemeData getDarkPurpleTheme() {
       ),
       fillColor: WidgetStateColor.resolveWith((states) {
         if (states.contains(WidgetState.focused)) {
-          return AppColors.darkFillColor;
+          return AppColors.primaryDarkPurple0;
         }
         return AppColors.grey800;
       }),

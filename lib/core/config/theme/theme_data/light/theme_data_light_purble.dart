@@ -13,6 +13,10 @@ ThemeData getLightPurpleTheme() {
       seedColor: AppColors.primaryLightPurple300,
       brightness: Brightness.light,
     ),
+    appBarTheme: AppBarTheme(
+      backgroundColor: AppColors.scaffoldBackgroundLightPurple,
+      elevation: 0,
+    ),
     textTheme: ThemeData.light().textTheme.apply(
       bodyColor: AppColors.grey900,
       displayColor: AppColors.grey900,
@@ -23,7 +27,7 @@ ThemeData getLightPurpleTheme() {
         foregroundColor: AppColors.grey0,
         disabledBackgroundColor: AppColors.grey100,
         disabledForegroundColor: AppColors.grey0,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         textStyle: AppTextStyles.mSemiBold,
       ),
     ),

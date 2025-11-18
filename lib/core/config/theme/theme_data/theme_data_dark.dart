@@ -4,7 +4,7 @@ import 'package:hungry/core/config/theme/app_color.dart';
 import 'package:hungry/core/config/theme/app_fonts.dart';
 import 'package:hungry/core/config/theme/app_text_style.dart';
 
-ThemeData getDarkOrangeTheme() {
+ThemeData getDarkTheme() {
   return ThemeData(
     scaffoldBackgroundColor: AppColors.scaffoldBackgroundColorDark,
     brightness: Brightness.dark,
@@ -44,7 +44,7 @@ ThemeData getDarkOrangeTheme() {
       ),
       fillColor: WidgetStateColor.resolveWith((states) {
         if (states.contains(WidgetState.focused)) {
-          return AppColors.primaryColor;
+          return AppColors.scaffoldBackgroundColorDark;
         }
         return AppColors.grey800;
       }),

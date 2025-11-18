@@ -1,3 +1,4 @@
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hungry/core/config/theme/app_color.dart';
 import 'package:hungry/core/config/theme/app_text_style.dart';
 
@@ -14,6 +15,10 @@ ThemeData getDarkGreenTheme() {
       seedColor: AppColors.primaryDarkGreen300,
       brightness: Brightness.dark,
     ),
+    appBarTheme: AppBarTheme(
+      backgroundColor: AppColors.scaffoldBackgroundDarkGreen,
+      elevation: 0,
+    ),
     textTheme: ThemeData.light().textTheme.apply(
           bodyColor: AppColors.grey0,
           displayColor: AppColors.grey0,
@@ -25,33 +30,33 @@ ThemeData getDarkGreenTheme() {
         disabledBackgroundColor: AppColors.grey800,
         disabledForegroundColor: AppColors.grey400,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(20.r),
         ),
         textStyle: AppTextStyles.mSemiBold,
       ),
     ),
     inputDecorationTheme: InputDecorationTheme(
       border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(10.r),
         borderSide: const BorderSide(
           color: AppColors.grey100,
         ),
       ),
       enabledBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(10.r),
         borderSide: const BorderSide(
           color: AppColors.grey100,
         ),
       ),
       focusedBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(10.r),
         borderSide: const BorderSide(
           color: AppColors.primaryDarkGreen200,
         ),
       ),
       fillColor: WidgetStateColor.resolveWith((states) {
         if (states.contains(WidgetState.focused)) {
-          return AppColors.darkFillColor;
+          return AppColors.primaryDarkGreen0;
         }
         return AppColors.grey800;
       }),

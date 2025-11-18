@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hungry/core/config/theme/cubit/theme_cubit.dart';
 import 'package:hungry/core/config/theme/utils/theme_mapper.dart';
+import 'package:hungry/routes.dart';
 import 'package:hungry/splash.dart';
-
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
@@ -21,13 +21,13 @@ class MainApp extends StatelessWidget {
               return MaterialApp(
                 theme: state.theme,
                 debugShowCheckedModeBanner: false,
-                home: child,
+                initialRoute: Splash.routeName,
+                onGenerateRoute: AppRouter.onGenerateRoute,
               );
             },
           ),
         );
       },
-      child: Splash(),
     );
   }
 }

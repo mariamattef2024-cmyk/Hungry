@@ -9,6 +9,7 @@ import 'package:hungry/core/widgets/logo_widget.dart';
 import 'package:hungry/root.dart';
 
 class Splash extends StatelessWidget {
+  static const String routeName = '/splash';
   const Splash({super.key});
 
   @override

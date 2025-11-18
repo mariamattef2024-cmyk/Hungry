@@ -4,6 +4,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:hungry/core/config/theme/theme_data/dark/theme_data_dark_blue.dart';
 import 'package:hungry/core/config/theme/theme_data/dark/theme_data_dark_green.dart';
+import 'package:hungry/core/config/theme/theme_data/dark/theme_data_dark_orange.dart';
 import 'package:hungry/core/config/theme/theme_data/dark/theme_data_dark_purble.dart';
 import 'package:hungry/core/config/theme/theme_data/dark/theme_data_dark_red.dart';
 import 'package:hungry/core/config/theme/theme_data/dark/theme_data_dark_yellow.dart';
@@ -13,7 +14,6 @@ import 'package:hungry/core/config/theme/theme_data/light/theme_data_light_orang
 import 'package:hungry/core/config/theme/theme_data/light/theme_data_light_purble.dart';
 import 'package:hungry/core/config/theme/theme_data/light/theme_data_light_red.dart';
 import 'package:hungry/core/config/theme/theme_data/light/theme_data_light_yellow.dart';
-import 'package:hungry/core/config/theme/theme_data/theme_data_dark.dart';
 
 enum ThemeNames { red, green, blue, yellow, purple, orange }
 

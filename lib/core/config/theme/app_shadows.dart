@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:hungry/core/config/theme/app_color.dart';
 
 class AppShadows {
   const AppShadows._();
 
   static BoxShadow shadow1 = BoxShadow(
-    offset: const Offset(0, 6),
+    color: Colors.white.withValues(alpha: 0.1),
     blurRadius: 17,
+    offset: Offset(0, 6),
     spreadRadius: 0,
-    color: AppColors.shadow1Color.withValues(alpha: 0.013),
   );
 }

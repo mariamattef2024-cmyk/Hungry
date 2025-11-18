@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hungry/core/config/theme/app_color.dart';
 import 'package:hungry/core/config/theme/app_text_style.dart';
 
@@ -13,6 +14,10 @@ ThemeData getLightGreenTheme() {
       seedColor: AppColors.primaryLightGreen300,
       brightness: Brightness.light,
     ),
+      appBarTheme: AppBarTheme(
+      backgroundColor: AppColors.scaffoldBackgroundLightGreen,
+      elevation: 0,
+    ),
     textTheme: ThemeData.light().textTheme.apply(
       bodyColor: AppColors.grey900,
       displayColor: AppColors.grey900,
@@ -23,21 +28,21 @@ ThemeData getLightGreenTheme() {
         foregroundColor: AppColors.grey0,
         disabledBackgroundColor: AppColors.grey100,
         disabledForegroundColor: AppColors.grey0,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.r)),
         textStyle: AppTextStyles.mSemiBold,
       ),
     ),
     inputDecorationTheme: InputDecorationTheme(
       border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(10.r),
         borderSide: const BorderSide(color: AppColors.grey100),
       ),
       enabledBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(10.r),
         borderSide: const BorderSide(color: AppColors.grey100),
       ),
       focusedBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(10.r),
         borderSide: const BorderSide(color: AppColors.primaryLightGreen200),
       ),
       fillColor: WidgetStateColor.resolveWith((states) {

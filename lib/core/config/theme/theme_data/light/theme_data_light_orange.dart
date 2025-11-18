@@ -13,6 +13,10 @@ ThemeData getLightOrangeTheme() {
       seedColor: AppColors.primaryColor,
       brightness: Brightness.light,
     ),
+      appBarTheme: AppBarTheme(
+      backgroundColor: AppColors.scaffoldBackgroundColorLight,
+      elevation: 0,
+    ),
     textTheme: ThemeData.light().textTheme.apply(
       bodyColor: AppColors.textColorLight,
       displayColor: AppColors.textColorLight,
@@ -40,7 +44,7 @@ ThemeData getLightOrangeTheme() {
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(20.0.r),
-        borderSide: const BorderSide(color: AppColors.cardColorLight),
+        borderSide: const BorderSide(color: AppColors.primaryColor),
       ),
       fillColor: WidgetStateColor.resolveWith((states) {
         if (states.contains(WidgetState.focused)) {

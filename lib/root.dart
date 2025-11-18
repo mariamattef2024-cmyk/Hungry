@@ -5,6 +5,7 @@ import 'package:hungry/features/order_history/presentation/views/order_history.d
 import 'package:hungry/features/profile/presentation/views/profile_screen.dart';
 
 class Root extends StatefulWidget {
+  static const String routeName = '/root';
   const Root({super.key});
 
   @override

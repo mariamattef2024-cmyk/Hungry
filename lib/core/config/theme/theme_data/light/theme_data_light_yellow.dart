@@ -13,6 +13,10 @@ ThemeData getLightYellowTheme() {
       seedColor: AppColors.primaryLightYellow300,
       brightness: Brightness.light,
     ),
+    appBarTheme: AppBarTheme(
+      backgroundColor: AppColors.scaffoldBackgroundLightYellow,
+      elevation: 0,
+    ),
     textTheme: ThemeData.light().textTheme.apply(
           bodyColor: AppColors.grey900,
           displayColor: AppColors.grey900,
@@ -24,7 +28,7 @@ ThemeData getLightYellowTheme() {
         disabledBackgroundColor: AppColors.grey100,
         disabledForegroundColor: AppColors.grey0,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(20),
         ),
         textStyle: AppTextStyles.mSemiBold,
       ),

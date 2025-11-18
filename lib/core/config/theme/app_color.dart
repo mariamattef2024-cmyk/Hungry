@@ -110,6 +110,20 @@ class AppColors {
   static const primaryDarkPurple300 = Color(0xffc869ee);
   static const scaffoldBackgroundDarkPurple = Color(0xff2d1b3a);
 
+  // Dark Orange Theme
+  static const primaryLightColor = Color(0xFFC85B2E);
+  static const primaryLightOrange0 = Color(0xff7B542F);
+  static const primaryLightOrangee25 = Color(0xffB6771D);
+  static const primaryLightOrangee50 = Color(0xffB6771D);
+  static const primaryLightOrange100 = Color(0xffB6771D);
+  static const scaffoldBackgroundLightOrange = Color(0xFFA5A666);
+  // Dark Orange Theme
+  static const primaryDarkColor = Color(0xFFC85B2E);
+  static const primaryDarkOrange0 = Color(0xff7B542F);
+  static const primaryDarkOrangee25 = Color(0xffB6771D);
+  static const primaryDarkOrangee50 = Color(0xffB6771D);
+  static const primaryDarkOrange100 = Color(0xffB6771D);
+  static const scaffoldBackgroundDarkOrange = Color(0xFF2B2A22);
   // grey scale
   static const grey900 = Color(0xff0d0d12);
   static const grey800 = Color(0xff1a1b25);

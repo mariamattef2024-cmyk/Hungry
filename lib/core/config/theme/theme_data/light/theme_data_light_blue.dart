@@ -14,6 +14,10 @@ ThemeData getLightBlueTheme() {
       seedColor: AppColors.primaryLightBlue300,
       brightness: Brightness.light,
     ),
+    appBarTheme: AppBarTheme(
+      backgroundColor: AppColors.scaffoldBackgroundLightBlue,
+      elevation: 0,
+    ),
     textTheme: ThemeData.light().textTheme.apply(
       bodyColor: AppColors.grey900,
       displayColor: AppColors.grey900,
@@ -24,21 +28,21 @@ ThemeData getLightBlueTheme() {
         foregroundColor: AppColors.grey0,
         disabledBackgroundColor: AppColors.grey100,
         disabledForegroundColor: AppColors.grey0,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.r)),
         textStyle: AppTextStyles.mSemiBold,
       ),
     ),
     inputDecorationTheme: InputDecorationTheme(
       border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(10.r),
         borderSide: const BorderSide(color: AppColors.grey100),
       ),
       enabledBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(10.r),
         borderSide: const BorderSide(color: AppColors.grey100),
       ),
       focusedBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(10.r),
         borderSide: const BorderSide(color: AppColors.primaryLightBlue200),
       ),
       fillColor: WidgetStateColor.resolveWith((states) {
@@ -49,13 +53,6 @@ ThemeData getLightBlueTheme() {
       }),
       filled: true,
       hintStyle: AppTextStyles.mRegular.copyWith(color: AppColors.grey400),
-    ),
-    cardTheme: CardThemeData(
-      color: AppColors.primaryLightRed25,
-
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.r)),
-      elevation: 4,
-      margin: EdgeInsets.all(8.r),
     ),
 
     bottomNavigationBarTheme: BottomNavigationBarThemeData(

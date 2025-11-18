@@ -13,6 +13,10 @@ ThemeData getDarkOrangeTheme() {
       seedColor: AppColors.primaryColor,
       brightness: Brightness.dark,
     ),
+    appBarTheme: AppBarTheme(
+      backgroundColor: AppColors.scaffoldBackgroundColorDark,
+      elevation: 0,
+    ),
     textTheme: ThemeData.dark().textTheme.apply(
       bodyColor: AppColors.textColorDark,
       displayColor: AppColors.textColorDark,
@@ -31,20 +35,22 @@ ThemeData getDarkOrangeTheme() {
     ),
     inputDecorationTheme: InputDecorationTheme(
       border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(10.r),
         borderSide: const BorderSide(color: AppColors.grey100),
       ),
       enabledBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(10.r),
         borderSide: const BorderSide(color: AppColors.grey100),
       ),
       focusedBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(10),
-        borderSide: const BorderSide(color: AppColors.primaryColor),
+        borderRadius: BorderRadius.circular(10.r),
+        borderSide: const BorderSide(color: AppColors.primaryLightOrange0),
       ),
       fillColor: WidgetStateColor.resolveWith((states) {
         if (states.contains(WidgetState.focused)) {
-          return AppColors.primaryColor;
+
+          //ToDo
+          return AppColors.scaffoldBackgroundColorDark;
         }
         return AppColors.grey800;
       }),
