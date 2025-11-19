@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hungry/core/screens/not_found.dart';
+import 'package:hungry/features/checkout/presentation/views/checkout_screen.dart';
 import 'package:hungry/features/home/presentation/views/home_screen.dart';
 import 'package:hungry/features/home/presentation/views/product_details_screen.dart';
+import 'package:hungry/features/order_history/presentation/views/order_history.dart';
 import 'package:hungry/root.dart';
 import 'package:hungry/splash.dart';
 
@@ -11,6 +13,8 @@ class AppRouter {
     Splash.routeName: (context) => const Splash(),
     HomeScreen.routeName: (context) => const HomeScreen(),
     ProductDetailsScreen.routeName: (context) => const ProductDetailsScreen(),
+    CheckoutScreen.routeName: (context) => const CheckoutScreen(),
+    OrderHistory.routeName: (context) => const OrderHistory(),
   };
 
   static Route<dynamic> onGenerateRoute(RouteSettings settings) {

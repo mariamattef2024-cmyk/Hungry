@@ -5,7 +5,8 @@ import 'package:hungry/core/widgets/custom_elevation_button.dart';
 
 class TotalWidget extends StatelessWidget {
   final Widget child;
-  const TotalWidget({super.key, required this.child});
+  final void Function()? onPressed;
+  const TotalWidget({super.key, required this.child, this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +30,7 @@ class TotalWidget extends StatelessWidget {
           ),
 
           CustomElevationButton(
-            onPressed: () {},
+            onPressed: onPressed,
             maximumSize: Size(200.w, 70.h),
             padding: EdgeInsets.symmetric(horizontal: 40.w, vertical: 20.h),
             child: child,

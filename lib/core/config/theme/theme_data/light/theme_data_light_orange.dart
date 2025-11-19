@@ -14,6 +14,7 @@ ThemeData getLightOrangeTheme() {
       brightness: Brightness.light,
     ),
       appBarTheme: AppBarTheme(
+        
       backgroundColor: AppColors.scaffoldBackgroundColorLight,
       elevation: 0,
     ),

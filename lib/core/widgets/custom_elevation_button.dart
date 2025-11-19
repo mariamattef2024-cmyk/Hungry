@@ -20,7 +20,7 @@ class CustomElevationButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         padding:
             padding ?? EdgeInsets.symmetric(horizontal: 10.w, vertical: 5.h),
-        maximumSize: maximumSize,
+        maximumSize:maximumSize,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10.r),
         ),

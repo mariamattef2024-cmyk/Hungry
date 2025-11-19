@@ -18,7 +18,7 @@ class CartItem extends StatelessWidget {
     this.onRemove,
     this.onAdd,
     this.onMinus,
-    required this.number
+    required this.number,
   });
 
   @override
@@ -31,6 +31,7 @@ class CartItem extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Image.asset(image, height: 80.h),
                 Gap(10.r),
@@ -47,11 +48,8 @@ class CartItem extends StatelessWidget {
                   children: [
                     IconButton(
                       color: Theme.of(context).colorScheme.primary,
-
                       onPressed: onMinus,
                       icon: Icon(Icons.remove_circle, size: 40),
-
-                      // color: Theme.of(context).colorScheme.primary,
                     ),
 
                     Gap(20.r),
@@ -80,7 +78,7 @@ class CartItem extends StatelessWidget {
                     ),
                   ),
                   onPressed: onRemove,
-                  child: Text('Remove'),
+                  child: Text('Remove', style: AppTextStyles.mMedium),
                 ),
               ],
             ),
