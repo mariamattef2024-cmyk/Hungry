@@ -2,16 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hungry/core/config/theme/app_color.dart';
 import 'package:hungry/core/config/theme/app_text_style.dart';
-
 import '../../app_fonts.dart';
 
 ThemeData getDarkBlueTheme() {
   return ThemeData(
-    scaffoldBackgroundColor: AppColors.scaffoldBackgroundDarkBlue,
+    // scaffoldBackgroundColor: AppColors.scaffoldBackgroundDarkBlue,
     brightness: Brightness.dark,
     fontFamily: AppFonts.robotoFont,
     colorScheme: ColorScheme.fromSeed(
-      seedColor: AppColors.primaryDarkBlue300,
+      seedColor: const Color.fromARGB(255, 182, 207, 218),
       brightness: Brightness.dark,
     ),
     appBarTheme: AppBarTheme(

@@ -6,7 +6,8 @@ import 'package:hungry/core/config/theme/extentions/theme_extentions.dart';
 import 'package:hungry/core/config/theme/utils/theme_functions.dart';
 import 'package:hungry/core/config/theme/utils/theme_mapper.dart';
 import 'package:hungry/core/widgets/logo_widget.dart';
-import 'package:hungry/root.dart';
+import 'package:hungry/features/test/presentation/views/home_test.dart';
+import 'package:hungry/features/test/presentation/views/market_screen.dart';
 
 class Splash extends StatelessWidget {
   static const String routeName = '/splash';
@@ -106,14 +107,7 @@ class Splash extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) {
-                return const Root();
-              },
-            ),
-          );
+          Navigator.pushNamed(context, MarketScreen.routeName);
         },
       ),
     );

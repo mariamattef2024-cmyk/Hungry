@@ -159,4 +159,10 @@ class AppTextStyles {
     fontWeight: FontWeight.w600,
     height: 1.55,
   );
+    static const xlSemiBold = TextStyle(
+    fontFamily: AppFonts.poppinsFont,
+    fontSize: 20,
+    fontWeight: FontWeight.w600,
+    height: 1,
+  );
 }
