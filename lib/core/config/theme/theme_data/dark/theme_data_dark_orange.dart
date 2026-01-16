@@ -6,6 +6,7 @@ import 'package:hungry/core/config/theme/app_text_style.dart';
 
 ThemeData getDarkOrangeTheme() {
   return ThemeData(
+    splashColor: Colors.transparent,
     scaffoldBackgroundColor: AppColors.scaffoldBackgroundColorDark,
     brightness: Brightness.dark,
     fontFamily: AppFonts.poppinsFont,

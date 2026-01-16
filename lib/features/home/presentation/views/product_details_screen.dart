@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:hungry/core/config/theme/app_text_style.dart';
-import 'package:hungry/core/widgets/custom_elevation_button.dart';
 import 'package:hungry/features/home/presentation/widgets/spicy_slider.dart';
 import 'package:hungry/features/home/presentation/widgets/topings_list.dart';
-import 'package:hungry/features/home/presentation/widgets/total_widget.dart' show TotalWidget;
+import 'package:hungry/features/home/presentation/widgets/total_widget.dart'
+    show TotalWidget;
 
 class ProductDetailsScreen extends StatefulWidget {
   static const String routeName = '/product-details-screen';
@@ -52,13 +52,30 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
               TopingsList(categorys: categorys),
 
               Gap(50.r),
-              TotalWidget(child: Text('Add to cart')),
               Gap(30.r),
             ],
           ),
         ),
       ),
+      bottomSheet: Container(
+        padding: EdgeInsets.symmetric(horizontal: 20.r, vertical: 15.r),
+        height: 120.h,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(30.r),
+            topRight: Radius.circular(30.r),
+          ),
+          color: Theme.of(context).scaffoldBackgroundColor,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.shade800,
+              blurRadius: 10.r,
+              offset: Offset(0, 0),
+            ),
+          ],
+        ),
+        child: TotalWidget(total: 'Total', child: Text('Add to cart'),onPressed: (){},),
+      ),
     );
   }
 }
-

@@ -7,6 +7,7 @@ import 'package:hungry/core/config/theme/app_text_style.dart';
 ThemeData getLightTheme() {
   return ThemeData(
     scaffoldBackgroundColor: AppColors.scaffoldBackgroundColorLight,
+    splashColor: Colors.transparent,
     brightness: Brightness.light,
     fontFamily: AppFonts.robotoFont,
     colorScheme: ColorScheme.fromSeed(

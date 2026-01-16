@@ -31,7 +31,18 @@ class ItemCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset(image, width: 150.h),
+                Stack(
+                  clipBehavior: Clip.none,
+                  children: [
+                    Positioned(
+                      bottom: -10,
+                      right: 0,
+                      left: 0,
+                      child: Image.asset('assets/images/shadow.png'),
+                    ),
+                    Image.asset(image, width: 150.h),
+                  ],
+                ),
                 Gap(15.r),
                 Text(title, style: AppTextStyles.mSemiBold),
                 Text(subtitle),
@@ -41,7 +52,7 @@ class ItemCard extends StatelessWidget {
                     Text('⭐  $rating', style: AppTextStyles.mMedium),
                     IconButton(
                       icon: Icon(
-                        Icons.favorite_rounded,
+                        Icons.favorite_border_outlined,
                         color: Theme.of(context).colorScheme.primary,
                       ),
                       onPressed: () {},

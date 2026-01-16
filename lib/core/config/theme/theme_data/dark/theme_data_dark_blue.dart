@@ -7,15 +7,12 @@ import '../../app_fonts.dart';
 ThemeData getDarkBlueTheme() {
   return ThemeData(
     // scaffoldBackgroundColor: AppColors.scaffoldBackgroundDarkBlue,
+    splashColor: Colors.transparent,
     brightness: Brightness.dark,
     fontFamily: AppFonts.robotoFont,
     colorScheme: ColorScheme.fromSeed(
       seedColor: const Color.fromARGB(255, 182, 207, 218),
       brightness: Brightness.dark,
-    ),
-    appBarTheme: AppBarTheme(
-      backgroundColor: AppColors.scaffoldBackgroundDarkBlue,
-      elevation: 0,
     ),
     textTheme: ThemeData.light().textTheme.apply(
       bodyColor: AppColors.grey0,
