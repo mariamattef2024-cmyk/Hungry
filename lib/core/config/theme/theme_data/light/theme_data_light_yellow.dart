@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 ThemeData getLightYellowTheme() {
   return ThemeData(
     scaffoldBackgroundColor: AppColors.scaffoldBackgroundLightYellow,
+    splashColor: Colors.transparent,
     brightness: Brightness.light,
     fontFamily: AppFonts.robotoFont,
     colorScheme: ColorScheme.fromSeed(

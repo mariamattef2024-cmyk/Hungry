@@ -16,7 +16,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  late List<String> categorys = [
+  static const List<String> categorys = [
     'All',
     'Burger',
     'Pizza',
@@ -24,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
     'Drinks',
     'Salad',
   ];
-  late int selectedIndex = 0;
+ late int selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -38,42 +38,40 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   Padding(
                     padding: EdgeInsets.all(20.0.r),
-                    child: SingleChildScrollView(
-                      child: Column(
-                        children: [
-                          Gap(20),
-                          UserHeader(),
-                          Gap(20),
-                          CustomtTextfField(
-                            hint: 'Search',
-                            child: SvgPicture.asset('assets/svg/search.svg'),
+                    child: Column(
+                      children: [
+                        Gap(20),
+                        UserHeader(),
+                        Gap(20),
+                        CustomtTextfField(
+                          hint: 'Search',
+                          child: SvgPicture.asset('assets/svg/search.svg'),
+                        ),
+                        Gap(20),
+                    
+                        SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          padding: EdgeInsets.only(right: 10.0.r),
+                          child: Row(
+                            children: List.generate(categorys.length, (
+                              index,
+                            ) {
+                              return Padding(
+                                padding: EdgeInsets.only(right: 8.0.r),
+                                child: ItemChip(
+                                  onTap: () {
+                                    selectedIndex = index;
+                                    setState(() {});
+                                  },
+                                  categorys: categorys,
+                                  selectedIndex: selectedIndex,
+                                  index: index,
+                                ),
+                              );
+                            }),
                           ),
-                          Gap(20),
-
-                          SingleChildScrollView(
-                            scrollDirection: Axis.horizontal,
-                            padding: EdgeInsets.only(right: 10.0.r),
-                            child: Row(
-                              children: List.generate(categorys.length, (
-                                index,
-                              ) {
-                                return Padding(
-                                  padding: EdgeInsets.only(right: 8.0.r),
-                                  child: ItemChip(
-                                    onTap: () {
-                                      selectedIndex = index;
-                                      setState(() {});
-                                    },
-                                    categorys: categorys,
-                                    selectedIndex: selectedIndex,
-                                    index: index,
-                                  ),
-                                );
-                              }),
-                            ),
-                          ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                 ],

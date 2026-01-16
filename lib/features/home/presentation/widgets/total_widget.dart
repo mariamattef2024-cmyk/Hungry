@@ -4,9 +4,10 @@ import 'package:hungry/core/config/theme/app_text_style.dart';
 import 'package:hungry/core/widgets/custom_elevation_button.dart';
 
 class TotalWidget extends StatelessWidget {
+  final String total;
   final Widget child;
   final void Function()? onPressed;
-  const TotalWidget({super.key, required this.child, this.onPressed});
+  const TotalWidget({super.key, required this.child, this.onPressed, required this.total});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +25,7 @@ class TotalWidget extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Total', style: AppTextStyles.mMedium),
+              Text(total, style: AppTextStyles.mMedium),
               Text('\$18.19', style: TextStyle(fontSize: 30.sp)),
             ],
           ),

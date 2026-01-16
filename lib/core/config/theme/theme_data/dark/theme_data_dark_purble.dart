@@ -6,6 +6,7 @@ import '../../app_fonts.dart';
 
 ThemeData getDarkPurpleTheme() {
   return ThemeData(
+    splashColor: Colors.transparent,
     scaffoldBackgroundColor: AppColors.scaffoldBackgroundDarkPurple,
     brightness: Brightness.dark,
     fontFamily: AppFonts.poppinsFont,

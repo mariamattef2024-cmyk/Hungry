@@ -7,14 +7,14 @@ import 'package:hungry/core/config/theme/app_text_style.dart';
 ThemeData getLightOrangeTheme() {
   return ThemeData(
     scaffoldBackgroundColor: AppColors.scaffoldBackgroundColorLight,
+    splashColor: Colors.transparent,
     brightness: Brightness.light,
     fontFamily: AppFonts.robotoFont,
     colorScheme: ColorScheme.fromSeed(
       seedColor: AppColors.primaryColor,
       brightness: Brightness.light,
     ),
-      appBarTheme: AppBarTheme(
-        
+    appBarTheme: AppBarTheme(
       backgroundColor: AppColors.scaffoldBackgroundColorLight,
       elevation: 0,
     ),
@@ -29,22 +29,22 @@ ThemeData getLightOrangeTheme() {
         disabledBackgroundColor: AppColors.grey100,
         disabledForegroundColor: AppColors.grey0,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20.0.r),
+          borderRadius: BorderRadius.circular(10.0.r),
         ),
         textStyle: AppTextStyles.lSemiBold,
       ),
     ),
     inputDecorationTheme: InputDecorationTheme(
       border: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(20.0.r),
+        borderRadius: BorderRadius.circular(10.0.r),
         borderSide: const BorderSide(color: AppColors.grey100),
       ),
       enabledBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(20.0.r),
+        borderRadius: BorderRadius.circular(10.0.r),
         borderSide: const BorderSide(color: AppColors.grey100),
       ),
       focusedBorder: OutlineInputBorder(
-        borderRadius: BorderRadius.circular(20.0.r),
+        borderRadius: BorderRadius.circular(10.0.r),
         borderSide: const BorderSide(color: AppColors.primaryColor),
       ),
       fillColor: WidgetStateColor.resolveWith((states) {

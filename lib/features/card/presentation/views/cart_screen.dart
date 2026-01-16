@@ -39,10 +39,7 @@ class _CartScreenState extends State<CartScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: AppBarWidget(),
-        scrolledUnderElevation: 0,
-      ),
+      appBar: AppBar(leading: AppBarWidget(), scrolledUnderElevation: 0),
       body: Padding(
         padding: EdgeInsets.only(right: 20.0.r, left: 20.r, bottom: 10.r),
         child: Column(
@@ -63,26 +60,34 @@ class _CartScreenState extends State<CartScreen> {
                 },
               ),
             ),
-
-            TotalWidget(
-              onPressed: () {
-                Navigator.pushNamed(context, '/checkout-screen');
-              },
-              child: Text('Checkout', style: AppTextStyles.mMedium),
-            ),
           ],
         ),
       ),
+      bottomSheet: Container(
+        padding: EdgeInsets.symmetric(horizontal: 20.r, vertical: 15.r),
+        height: 120.h,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(30.r),
+            topRight: Radius.circular(30.r),
+          ),
+          color: Theme.of(context).scaffoldBackgroundColor,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.shade800,
+              blurRadius: 10.r,
+              offset: Offset(0, 0),
+            ),
+          ],
+        ),
+        child: TotalWidget(
+          total: 'Total',
+          onPressed: () {
+            Navigator.pushNamed(context, '/checkout-screen');
+          },
+          child: Text('Checkout', style: AppTextStyles.mMedium),
+        ),
+      ),
     );
-  }
-}
-
-
-class TstPR extends StatelessWidget {
-  const TstPR({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
   }
 }

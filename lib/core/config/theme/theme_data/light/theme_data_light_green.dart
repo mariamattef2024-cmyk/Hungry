@@ -8,6 +8,7 @@ import '../../app_fonts.dart';
 ThemeData getLightGreenTheme() {
   return ThemeData(
     scaffoldBackgroundColor: AppColors.scaffoldBackgroundLightGreen,
+    splashColor: Colors.transparent,
     brightness: Brightness.light,
     fontFamily: AppFonts.robotoFont,
     colorScheme: ColorScheme.fromSeed(

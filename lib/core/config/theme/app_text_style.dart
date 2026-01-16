@@ -6,9 +6,8 @@ class AppTextStyles {
 
   static const headingStyle16 = TextStyle(
     fontSize: 16,
-    fontWeight: FontWeight.w600,
+    fontWeight: FontWeight.w400,
     fontFamily: AppFonts.robotoFont,
-    // fontStyle: FontStyle(),
     color: Color(0xFF3C2F2F),
   );
   static const headingStyle18Po = TextStyle(
@@ -52,9 +51,10 @@ class AppTextStyles {
 
   static const headingH3 = TextStyle(
     fontFamily: AppFonts.poppinsFont,
-    fontWeight: FontWeight.w600,
-    fontSize: 32,
-    height: 1.4,
+    fontWeight: FontWeight.w700,
+    fontSize: 30,
+    height: 1,
+    letterSpacing: 0
   );
 
   static const headingH2 = TextStyle(

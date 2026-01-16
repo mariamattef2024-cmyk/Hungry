@@ -3,7 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:hungry/core/config/theme/app_text_style.dart';
+import 'package:hungry/features/auth/presentation/screens/sign_up_screen.dart';
 import 'package:hungry/features/auth/presentation/widgets/custom_text_form_field.dart';
+import 'package:hungry/root.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -17,55 +19,107 @@ class LoginScreen extends StatelessWidget {
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: Scaffold(
-        body: Padding(
-          padding: EdgeInsets.all(20.0.r),
-          child: Form(
-            key: formKey,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SvgPicture.asset(
-                  'assets/svg/Hungry_.svg',
-                  colorFilter: ColorFilter.mode(
-                    Theme.of(context).colorScheme.primary,
-                    BlendMode.srcIn,
-                  ),
-                ),
-                Gap(20),
-                Text(
-                  'Welcome back ,Discover the fast food',
-                  style: AppTextStyles.headingStyle18Po,
-                ),
-
-                Gap(40),
-                CustomTextFormField(
-                  hint: 'Email',
-                  controller: emailController,
-                  isPassword: false,
-                ),
-                Gap(20),
-                CustomTextFormField(
-                  hint: 'Password',
-                  isPassword: true,
-                  controller: passwordController,
-                ),
-                Gap(60),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    minimumSize: Size(double.infinity, 50.h),
-                  ),
-                  onPressed: () {
-                    if (formKey.currentState!.validate()) {}
-                  },
-                  child: Text('Login'),
-                ),
-              ],
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Gap(150),
+            SvgPicture.asset(
+              'assets/svg/Hungry_.svg',
+              colorFilter: ColorFilter.mode(
+                Theme.of(context).colorScheme.primary,
+                BlendMode.srcIn,
+              ),
             ),
-          ),
+            Gap(20),
+            Text(
+              'Welcome back ,Discover the fast food',
+              style: AppTextStyles.headingStyle18Ro,
+            ),
+            Gap(40),
+            Expanded(
+              child: Container(
+                padding: EdgeInsets.all(20.r),
+                decoration: BoxDecoration(
+                  color: Theme.of(context).colorScheme.primary,
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(30.r),
+                    topRight: Radius.circular(30.r),
+                  ),
+                ),
+                child: SingleChildScrollView(
+                  child: Form(
+                    key: formKey,
+                    child: Column(
+                      children: [
+                        Gap(40),
+                        CustomTextFormField(
+                          hint: 'Email',
+                          controller: emailController,
+                          isPassword: false,
+                        ),
+                        Gap(20),
+                        CustomTextFormField(
+                          hint: 'Password',
+                          isPassword: true,
+                          controller: passwordController,
+                        ),
+                        Gap(60),
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            minimumSize: Size(double.infinity, 50.h),
+                          ),
+                          onPressed: () {
+                            if (formKey.currentState!.validate()) {}
+                          },
+                          child: Text('Login'),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              'Donnt have an account?',
+                              style: AppTextStyles.headingStyle16.copyWith(
+                                color: Theme.of(context).colorScheme.onPrimary,
+                              ),
+                            ),
+                            TextButton(
+                              onPressed: () {
+                                Navigator.pushNamed(
+                                  context,
+                                  SignUpScreen.routeName,
+                                );
+                              },
+                              child: Text(
+                                'Sign Up',
+                                style: AppTextStyles.headingStyle18Po.copyWith(
+                                  color: Theme.of(
+                                    context,
+                                  ).colorScheme.onPrimary,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.pushNamed(context, Root.routeName);
+                          },
+                          child: Text(
+                            "Continue as Guest?",
+                            style: AppTextStyles.headingStyle16.copyWith(
+                              color: Theme.of(context).colorScheme.onPrimary,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
-     
-     
       ),
     );
   }

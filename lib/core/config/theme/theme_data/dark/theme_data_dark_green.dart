@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 
 ThemeData getDarkGreenTheme() {
   return ThemeData(
+    splashColor: Colors.transparent,
     scaffoldBackgroundColor: AppColors.scaffoldBackgroundDarkGreen,
     brightness: Brightness.dark,
     fontFamily: AppFonts.robotoFont,
