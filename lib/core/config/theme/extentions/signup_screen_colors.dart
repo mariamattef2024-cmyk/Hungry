@@ -3,14 +3,10 @@ import 'package:flutter/material.dart';
 class SignupScreenColors extends ThemeExtension<SignupScreenColors> {
   final Color? topBackgroundColor;
 
-  const SignupScreenColors({
-    required this.topBackgroundColor,
-  });
+  const SignupScreenColors({required this.topBackgroundColor});
 
   @override
-  ThemeExtension<SignupScreenColors> copyWith({
-    Color? topBackgroundColor,
-  }) {
+  ThemeExtension<SignupScreenColors> copyWith({Color? topBackgroundColor}) {
     return SignupScreenColors(
       topBackgroundColor: topBackgroundColor ?? this.topBackgroundColor,
     );
@@ -25,7 +21,11 @@ class SignupScreenColors extends ThemeExtension<SignupScreenColors> {
       return this;
     }
     return SignupScreenColors(
-      topBackgroundColor: Color.lerp(topBackgroundColor, other.topBackgroundColor, t),
+      topBackgroundColor: Color.lerp(
+        topBackgroundColor,
+        other.topBackgroundColor,
+        t,
+      ),
     );
   }
 }

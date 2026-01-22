@@ -31,7 +31,6 @@ ThemeData getLightTheme() {
       ),
     ),
     inputDecorationTheme: InputDecorationTheme(
-      
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(20.0.r),
         borderSide: const BorderSide(color: AppColors.grey100),

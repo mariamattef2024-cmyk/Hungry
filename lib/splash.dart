@@ -5,7 +5,7 @@ import 'package:hungry/core/config/theme/app_color.dart';
 import 'package:hungry/core/config/theme/utils/theme_functions.dart';
 import 'package:hungry/core/config/theme/utils/theme_mapper.dart';
 import 'package:hungry/core/widgets/logo_widget.dart';
-import 'package:hungry/features/auth/presentation/screens/sign_up_screen.dart';
+import 'package:hungry/features/auth/presentation/screens/login_screen.dart';
 import 'package:hungry/root.dart';
 
 class Splash extends StatefulWidget {
@@ -45,8 +45,8 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
 
     _controller.forward();
 
-    Future.delayed(const Duration(seconds: 3), () {
-      // Navigator.pushReplacementNamed(context, Root.routeName);
+    Future.delayed(const Duration(seconds: 5), () {
+      Navigator.pushReplacementNamed(context, LoginScreen.routeName);
     });
   }
 

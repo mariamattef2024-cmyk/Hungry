@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:hungry/core/config/theme/app_text_style.dart';
+import 'package:hungry/core/widgets/app_bar_widget.dart';
 import 'package:hungry/core/widgets/custom_text_field.dart';
+import 'package:hungry/features/auth/presentation/screens/login_screen.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -31,13 +33,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Scaffold(
       extendBody: true,
       appBar: AppBar(
+        leading: AppBarWidget(),
         actions: [
-          IconButton(
-            icon: const Icon(Icons.settings),
-            onPressed: () {
-              // Navigate to edit profile screen
-            },
-          ),
+          IconButton(icon: const Icon(Icons.settings), onPressed: () {}),
         ],
       ),
       body: SingleChildScrollView(
@@ -170,30 +168,41 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
               ),
 
-              Container(
-                padding: EdgeInsets.symmetric(vertical: 15.h, horizontal: 25.w),
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    width: 2.w,
-                    color: Theme.of(context).colorScheme.primary,
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushReplacementNamed(
+                    context,
+                    LoginScreen.routeName,
+                  );
+                },
+                child: Container(
+                  padding: EdgeInsets.symmetric(
+                    vertical: 15.h,
+                    horizontal: 25.w,
                   ),
-                  borderRadius: BorderRadius.circular(10.r),
-                ),
-                child: Row(
-                  children: [
-                    Text(
-                      'Log out',
-                      style: AppTextStyles.headingStyle18Ro.copyWith(
-                        color: Theme.of(context).colorScheme.primary,
-                      ),
-                    ),
-                    Gap(5.w),
-                    Icon(
-                      Icons.logout,
-                      size: 20.h,
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      width: 2.w,
                       color: Theme.of(context).colorScheme.primary,
                     ),
-                  ],
+                    borderRadius: BorderRadius.circular(10.r),
+                  ),
+                  child: Row(
+                    children: [
+                      Text(
+                        'Log out',
+                        style: AppTextStyles.headingStyle18Ro.copyWith(
+                          color: Theme.of(context).colorScheme.primary,
+                        ),
+                      ),
+                      Gap(5.w),
+                      Icon(
+                        Icons.logout,
+                        size: 20.h,
+                        color: Theme.of(context).colorScheme.primary,
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],

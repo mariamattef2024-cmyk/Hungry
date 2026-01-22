@@ -21,9 +21,9 @@ ThemeData getDarkGreenTheme() {
       elevation: 0,
     ),
     textTheme: ThemeData.light().textTheme.apply(
-          bodyColor: AppColors.grey0,
-          displayColor: AppColors.grey0,
-        ),
+      bodyColor: AppColors.grey0,
+      displayColor: AppColors.grey0,
+    ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: AppColors.primaryDarkGreen300,
@@ -39,21 +39,15 @@ ThemeData getDarkGreenTheme() {
     inputDecorationTheme: InputDecorationTheme(
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(10.r),
-        borderSide: const BorderSide(
-          color: AppColors.grey100,
-        ),
+        borderSide: const BorderSide(color: AppColors.grey100),
       ),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(10.r),
-        borderSide: const BorderSide(
-          color: AppColors.grey100,
-        ),
+        borderSide: const BorderSide(color: AppColors.grey100),
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(10.r),
-        borderSide: const BorderSide(
-          color: AppColors.primaryDarkGreen200,
-        ),
+        borderSide: const BorderSide(color: AppColors.primaryDarkGreen200),
       ),
       fillColor: WidgetStateColor.resolveWith((states) {
         if (states.contains(WidgetState.focused)) {

@@ -24,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
     'Drinks',
     'Salad',
   ];
- late int selectedIndex = 0;
+  late int selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -48,14 +48,12 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: SvgPicture.asset('assets/svg/search.svg'),
                         ),
                         Gap(20),
-                    
+
                         SingleChildScrollView(
                           scrollDirection: Axis.horizontal,
                           padding: EdgeInsets.only(right: 10.0.r),
                           child: Row(
-                            children: List.generate(categorys.length, (
-                              index,
-                            ) {
+                            children: List.generate(categorys.length, (index) {
                               return Padding(
                                 padding: EdgeInsets.only(right: 8.0.r),
                                 child: ItemChip(

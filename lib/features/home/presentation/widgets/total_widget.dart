@@ -7,7 +7,12 @@ class TotalWidget extends StatelessWidget {
   final String total;
   final Widget child;
   final void Function()? onPressed;
-  const TotalWidget({super.key, required this.child, this.onPressed, required this.total});
+  const TotalWidget({
+    super.key,
+    required this.child,
+    this.onPressed,
+    required this.total,
+  });
 
   @override
   Widget build(BuildContext context) {

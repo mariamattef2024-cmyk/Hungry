@@ -18,39 +18,31 @@ ThemeData getLightRedTheme() {
       elevation: 0,
     ),
     textTheme: ThemeData.light().textTheme.apply(
-          bodyColor: AppColors.grey900,
-          displayColor: AppColors.grey900,
-        ),
+      bodyColor: AppColors.grey900,
+      displayColor: AppColors.grey900,
+    ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: AppColors.primaryLightRed300,
         foregroundColor: AppColors.grey0,
         disabledBackgroundColor: AppColors.grey100,
         disabledForegroundColor: AppColors.grey0,
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
-        ),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         textStyle: AppTextStyles.mSemiBold,
       ),
     ),
     inputDecorationTheme: InputDecorationTheme(
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(10),
-        borderSide: const BorderSide(
-          color: AppColors.grey100,
-        ),
+        borderSide: const BorderSide(color: AppColors.grey100),
       ),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(10),
-        borderSide: const BorderSide(
-          color: AppColors.grey100,
-        ),
+        borderSide: const BorderSide(color: AppColors.grey100),
       ),
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(10),
-        borderSide: const BorderSide(
-          color: AppColors.primaryLightRed200,
-        ),
+        borderSide: const BorderSide(color: AppColors.primaryLightRed200),
       ),
       fillColor: WidgetStateColor.resolveWith((states) {
         if (states.contains(WidgetState.focused)) {

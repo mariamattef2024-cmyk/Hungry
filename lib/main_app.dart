@@ -19,7 +19,6 @@ class MainApp extends StatelessWidget {
           child: BlocBuilder<ThemeCubit, AppTheme>(
             builder: (context, state) {
               return MaterialApp(
-                
                 theme: state.theme,
                 debugShowCheckedModeBanner: false,
                 initialRoute: Splash.routeName,

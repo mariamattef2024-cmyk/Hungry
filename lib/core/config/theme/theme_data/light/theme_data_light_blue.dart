@@ -29,7 +29,9 @@ ThemeData getLightBlueTheme() {
         foregroundColor: AppColors.grey0,
         disabledBackgroundColor: AppColors.grey100,
         disabledForegroundColor: AppColors.grey0,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.r)),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20.r),
+        ),
         textStyle: AppTextStyles.mSemiBold,
       ),
     ),

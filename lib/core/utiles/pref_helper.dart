@@ -17,5 +17,4 @@ class PrefHelper {
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     return prefs.remove(_tokenKey);
   }
-  
 }

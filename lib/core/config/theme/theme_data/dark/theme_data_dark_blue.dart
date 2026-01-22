@@ -24,7 +24,9 @@ ThemeData getDarkBlueTheme() {
         foregroundColor: AppColors.grey0,
         disabledBackgroundColor: AppColors.grey800,
         disabledForegroundColor: AppColors.grey400,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.r)),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20.r),
+        ),
         textStyle: AppTextStyles.mSemiBold,
       ),
     ),

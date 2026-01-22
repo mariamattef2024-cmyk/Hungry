@@ -49,7 +49,6 @@ ThemeData getDarkOrangeTheme() {
       ),
       fillColor: WidgetStateColor.resolveWith((states) {
         if (states.contains(WidgetState.focused)) {
-
           //ToDo
           return AppColors.scaffoldBackgroundColorDark;
         }

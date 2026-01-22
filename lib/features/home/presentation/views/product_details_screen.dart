@@ -74,7 +74,11 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
             ),
           ],
         ),
-        child: TotalWidget(total: 'Total', child: Text('Add to cart'),onPressed: (){},),
+        child: TotalWidget(
+          total: 'Total',
+          child: Text('Add to cart'),
+          onPressed: () {},
+        ),
       ),
     );
   }

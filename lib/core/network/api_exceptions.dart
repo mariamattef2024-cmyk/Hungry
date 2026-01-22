@@ -1,7 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:hungry/core/network/api_error.dart';
 
-
 class ApiExceptions {
   static ApiError handleError(DioException error) {
     final statusCode = error.response?.statusCode;
@@ -13,25 +12,26 @@ class ApiExceptions {
       }
     }
 
-    if(statusCode == 302) {
+    if (statusCode == 302) {
       throw ApiError(message: 'This Email Already Taken');
     }
-
 
     print(statusCode);
     print(data);
 
     switch (error.type) {
       case DioExceptionType.connectionTimeout:
-        return ApiError(message: "Connection timeout. Please check your internet connection");
+        return ApiError(
+          message: "Connection timeout. Please check your internet connection",
+        );
       case DioExceptionType.sendTimeout:
         return ApiError(message: "Request timeout. Please try again");
       case DioExceptionType.receiveTimeout:
         return ApiError(message: "Response timeout. Please try again");
       default:
-        return ApiError(message: "An unexpected error occurred. Please try again");
+        return ApiError(
+          message: "An unexpected error occurred. Please try again",
+        );
     }
   }
 }
-
-
